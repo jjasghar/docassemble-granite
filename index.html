@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/white.css">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+									  <p>Streamlining Enterprise‑Scale Open‑Source Governance with docassemble & Granite </p>
+                    <br />
+                    <p>by JJ Asghar || awesome@ibm.com</p>
+                </section>
+                <!-- <section data-markdown>
+                    <p>What is <code>ed</code>?</p>
+                    > ...developed by Ken Thompson in August 1969 on a PDP-7 at AT&T Bell Labs
+
+                    <p>And most importantly</p>
+                    > ...aspects of ed went on to influence ex, which in turn spawned vi
+                </section> -->
+                <section>
+                  <section>
+                    <p>Situation</p>
+                  </section>
+                  <section>
+                    <p>IBM is a BIG company.</p>
+                  </section>
+                  <section>
+                    <p>IBM needs to know what we are actually open sourcing.</p>
+                  </section>
+                  <section>
+                    <p>IBM needs to know where we are engaging and what communities we are upstreaming to.</p>
+                  </section>
+                  <section>
+											<p>We have 8,000+ "known" IBM ran/responsible open source repos.</p>
+											<p>Including 90+ public GitHub organizations.</p>
+										</section>
+										<section>
+											<p>We have built in an opt-in upstream tracking system to get some visibility.</p>
+                    <p>But it was quickly leveraged by "metrics" driven development manangers, so we had to roll back some statistics that were being weaponized.</p>
+                  </section>
+										<section>
+											<p>We had (and honestly still have) a fundemental miss understanding of what an "open source contribution" is, and the scopes of the different levels of upstreaming code.</p>
+                  </section>
+										<section>
+											<p>People knew of the overarching open source process, but because of the convolution or length of time it took, they ignored it.</p>
+                      <br><br>
+											<p>Or found excuses not to do it.</p>
+                  </section>
+                </section>
+                <section>
+                  <section>
+                    <p>Problem</p>
+                  </section>
+                    <section>
+                      <p><img src="img/user_github.png" /></p>
+                    </section>
+                    <section>
+                      <p><img src="img/original_overview.png" /></p>
+                    </section>
+                  <section>
+                    <p>Paper work and overhead pushed 8+ hours of additional work for every patch we wanted to upstream.</p>
+									  <br><br><br>
+                    <p>Pssst....JJ show the old example of the questionare here</p>
+                  </section>
+                  <section>
+                    <p>We had no actively maintained centralized tracking of what was being open sourced.</p>
+                  </section>
+                  <section>
+                    <p>We had people just releasing code with "emails" from their first line managers, where we didn't know if we were letting go code that could be what we considered to be "crown jewels."</p>
+                  </section>
+                </section>
+                <section>
+                  <section>
+                    <p>How we fixed it...</p>
+                  </section>
+                  <section>
+                    <p><img src="img/overview.png" /></p>
+                  </section>
+                  <section>
+                    <p>- <a href="https://docassemble.org" target="_blank">docassemble</a>
+                    <p>- <a href="https://contribution.oss-contribution.dal.app.cirrus.ibm.com/" target="_blank">Our docassemble instance</a>
+                  </section>
+                  <section>
+                    <p>Yep, it's done with <a href="https://github.ibm.com/open-source/docassemble-continuous-committer-questionnaire/blob/main/docassemble/continuous-committer-questionnaire/data/questions/interview.yml" target="_blank">yaml</a>.
+                  </section>
+                  <section>
+                    <p><a href="https://registry.osscar.dal.app.cirrus.ibm.com" target="_blank">OSSCAR Registry</a>
+                  </section>
+                  <section>
+                    <p><a href="https://oss-contribution-upload.oss-contribution.dal.app.cirrus.ibm.com" target="_blank">OSSCAR AI instance</a>
+                  </section>
+                </section>
+                <section>
+                  <section>
+                    <p>So what did we learn?</p>
+                  </section>
+                  <section>
+                    <p>If I can talk more, I'll tell you but tl;dr...</p>
+                  </section>
+                  <section>
+                    <p class="fragment">- Putting logic in a questioniare truly helped our developers.</p>
+                    <p class="fragment">- If people complained about the process that means they are actually using the process.</p>
+                    <p class="fragment">- Education of an ever changing open source landscape, also requires a level of credibility internally to be a trusted messenger.</p>
+                    <p class="fragment">...and frankly no one likes paperwork, and they just want to open source things, but for a business to work you <b>have to</b> have some oversight.</p>
+                  </section>
+                  <section>
+                    <p>I can't give you my code, but go to this QR code to see one of the best tutorials on docassemble to help streamline your processes:</p>
+                    <img src="img/youtube_qr.png" />
+                  </section>
+                  <section>
+                    <p>Thank you, and please head over to the IBM Generative Computing Lounge so we can dig deeper if you want.</p>
+                    <p>JJ Asghar || awesome@ibm.com</p>
+                  </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+                slideNumber: true,
+                //autoSlide: 15000,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            });
+        </script>
+    </body>
+</html>
